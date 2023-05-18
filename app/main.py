@@ -3,7 +3,7 @@ import requests
 import os
 from flask import Flask, request, render_template
 
-from presignedUrlGenerator import generate_presigned_url
+from presigned_url_generator import generate_presigned_url
 
 app = Flask(__name__)
 app.logger.addHandler(logging.StreamHandler())
