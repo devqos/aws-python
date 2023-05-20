@@ -18,7 +18,7 @@ def home():
 @app.route('/upload', methods=['POST'])
 def upload_file():
     file = request.files['file']
-    presigned_url = generate_presigned_url(os.environ.get('VARIABLE_NAME'), file.filename, 3600)
+    presigned_url = generate_presigned_url(os.environ.get('BUCKET_NAME'), file.filename, 3600)
     files = {"file": file.stream}
     response = requests.post(presigned_url['url'], data=presigned_url['fields'], files=files)
 
