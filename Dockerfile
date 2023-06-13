@@ -2,7 +2,7 @@ FROM python:3.10
 WORKDIR /app
 
 COPY requirements.txt .
-COPY /app .
+COPY /s3Uploader .
 COPY /tests .
 
 RUN python -m venv venv
