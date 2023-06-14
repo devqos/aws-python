@@ -2,7 +2,7 @@ import flask
 
 
 def create_app(test_config: map = None) -> flask.Flask:
-    app: flask.Flask = flask.Flask(__name__, instance_relative_config=True)
+    app = flask.Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
         SECRET_KEY='dev'
     )
