@@ -3,7 +3,7 @@ WORKDIR /app
 
 COPY requirements.txt .
 COPY /s3Uploader .
-COPY /tests .
+COPY /s3Uploader/tests .
 
 RUN python -m venv venv
 RUN /bin/bash -c "source venv/bin/activate && pip3 install --no-cache-dir -r requirements.txt"

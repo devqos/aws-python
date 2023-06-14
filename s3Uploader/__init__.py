@@ -1,8 +1,8 @@
-from flask import Flask
+import flask
 
 
-def create_app(test_config: map = None) -> Flask:
-    app = Flask(__name__, instance_relative_config=True)
+def create_app(test_config: map = None) -> flask.Flask:
+    app: flask.Flask = flask.Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
         SECRET_KEY='dev'
     )
@@ -12,7 +12,7 @@ def create_app(test_config: map = None) -> Flask:
     else:
         app.config.from_mapping(test_config)
 
-    from . import main_controller
+    from s3Uploader.controllers import main_controller
     app.register_blueprint(main_controller.bp)
     app.add_url_rule('/', endpoint='index')
 
