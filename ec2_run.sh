@@ -13,7 +13,7 @@ source venv/bin/activate
 
 pip3 install -r requirements.txt
 
-cat <<EOF > /etc/systemd/system/flask-app.service
+cat <<EOF >/etc/systemd/system/flask-app.service
 [Unit]
 Description=Flask App
 After=network.target
