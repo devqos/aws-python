@@ -2,7 +2,7 @@ import os
 import requests
 import flask
 
-from s3Uploader.s3UploaderUtils.presigned_url_generator import PresignedUrlGenerator
+from s3uploader.utils.presigned_url_generator import PresignedUrlGenerator
 
 bp = flask.Blueprint('main_controller', __name__)
 

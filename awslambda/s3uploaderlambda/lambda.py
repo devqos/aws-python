@@ -3,7 +3,7 @@ import boto3
 import datetime
 
 
-def lambda_handler(event, context):
+def lambda_handler(event, context) -> None:
     s3_object = event['Records'][0]['s3']['object']['key']
     s3_object_size = event['Records'][0]['s3']['object']['size']
 
